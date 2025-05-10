@@ -60,8 +60,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-secondary-900">
-      <div className="max-w-6xl mx-auto px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-6xl px-8 py-12 mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Logo et Description */}
           <div className="col-span-1">
             <motion.div
@@ -73,7 +73,7 @@ const Footer = () => {
               <img
                 src="/src/assets/LOGO2.jpg"
                 alt="FEIDEU SERVICES"
-                className="h-16 w-auto mb-4"
+                className="w-auto h-16 mb-4"
               />
               <p className="text-secondary-600">
                 Solutions technologiques innovantes pour les établissements éducatifs.
@@ -89,30 +89,30 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="text-lg font-semibold mb-4 text-secondary-900">Liens Rapides</h3>
+              <h3 className="mb-4 text-lg font-semibold text-secondary-900">Liens Rapides</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Accueil
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/about" className="transition-colors text-secondary-600 hover:text-primary-600">
                     À Propos
                   </a>
                 </li>
                 <li>
-                  <a href="/services" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/services" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/offers" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/offers" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Offres
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/contact" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Contact
                   </a>
                 </li>
@@ -128,25 +128,25 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h3 className="text-lg font-semibold mb-4 text-secondary-900">Services</h3>
+              <h3 className="mb-4 text-lg font-semibold text-secondary-900">Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/services" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/services" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Maintenance Informatique
                   </a>
                 </li>
                 <li>
-                  <a href="/services" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/services" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Logiciels de Gestion d'École
                   </a>
                 </li>
                 <li>
-                  <a href="/services" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/services" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Réseaux Informatiques
                   </a>
                 </li>
                 <li>
-                  <a href="/services" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                  <a href="/services" className="transition-colors text-secondary-600 hover:text-primary-600">
                     Laboratoires de Sciences
                   </a>
                 </li>
@@ -162,13 +162,13 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-lg font-semibold mb-4 text-secondary-900">Contact</h3>
+              <h3 className="mb-4 text-lg font-semibold text-secondary-900">Contact</h3>
               <ul className="space-y-2">
                 <li className="text-secondary-600">
                   Yaoundé, Cameroun
                 </li>
                 <li className="text-secondary-600">
-                  +237 6 99 99 99 99
+                  <FaPhone className="inline-block mr-2" /> +237 6 77 40 28 51
                 </li>
                 <li className="text-secondary-600">
                   contact@feideuservices.com
@@ -177,17 +177,17 @@ const Footer = () => {
                   Lun - Ven: 8h - 18h
                 </li>
               </ul>
-              <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-secondary-600 hover:text-primary-600 transition-colors">
+              <div className="flex mt-4 space-x-4">
+                <a href="#" className="transition-colors text-secondary-600 hover:text-primary-600">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="#" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                <a href="#" className="transition-colors text-secondary-600 hover:text-primary-600">
                   <FaTwitter size={24} />
                 </a>
-                <a href="#" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                <a href="#" className="transition-colors text-secondary-600 hover:text-primary-600">
                   <FaInstagram size={24} />
                 </a>
-                <a href="#" className="text-secondary-600 hover:text-primary-600 transition-colors">
+                <a href="#" className="transition-colors text-secondary-600 hover:text-primary-600">
                   <FaGithub size={24} />
                 </a>
               </div>
@@ -195,7 +195,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-secondary-200 mt-12 pt-8">
+        <div className="pt-8 mt-12 border-t border-secondary-200">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

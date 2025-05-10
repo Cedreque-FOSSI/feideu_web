@@ -2,13 +2,19 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import albertImage from '../assets/albert.jpg';
-
+import CedriqueProfile from '../assets/CedriqueProfile.jpg';
 const teamMembers = [
   {
-    name: "Mr WOMGA ALBERT",
+    name: "WOMGA ALBERT",
     role: "CEO",
     bio: "Fondateur et dirigeant de FEIDEU SERVICES, expert en solutions technologiques pour l'éducation.",
     image: albertImage
+  },
+  {
+    name: "Cédrique FOSSI",
+    role: "Developpeur",
+    bio: "Ingénieur logiciel et technicien en Systèmes d'informations",
+    image: CedriqueProfile
   }
 ];
 
@@ -63,14 +69,14 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-secondary-50">
       {/* Section Hero */}
       <section className="py-24 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-6xl px-8 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl text-primary-900">
               À Propos de Nous
             </h1>
             <p className="text-xl text-secondary-700">
@@ -82,16 +88,16 @@ const About = () => {
 
       {/* Section Mission et Vision */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-6xl px-8 mx-auto">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="p-8 bg-white shadow-lg rounded-2xl"
             >
-              <h2 className="text-2xl font-bold text-primary-900 mb-4">
+              <h2 className="mb-4 text-2xl font-bold text-primary-900">
                 Notre Mission
               </h2>
               <p className="text-secondary-700">
@@ -103,9 +109,9 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="p-8 bg-white shadow-lg rounded-2xl"
             >
-              <h2 className="text-2xl font-bold text-primary-900 mb-4">
+              <h2 className="mb-4 text-2xl font-bold text-primary-900">
                 Notre Vision
               </h2>
               <p className="text-secondary-700">
@@ -118,22 +124,22 @@ const About = () => {
 
       {/* Section Notre Équipe */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-6xl px-8 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-primary-900 mb-4">
+            <h2 className="mb-4 text-3xl font-bold text-primary-900">
               Notre Équipe
             </h2>
             <p className="text-xl text-secondary-700">
               Des professionnels dévoués à votre succès
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -141,20 +147,20 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="overflow-hidden bg-white shadow-lg rounded-2xl"
               >
                 <div className="p-8 text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                  <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="object-cover w-full h-full"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-primary-900 mb-2">
+                  <h3 className="mb-2 text-xl font-bold text-primary-900">
                     {member.name}
                   </h3>
-                  <p className="text-primary-600 font-medium mb-4">
+                  <p className="mb-4 font-medium text-primary-600">
                     {member.role}
                   </p>
                   <p className="text-secondary-700">
@@ -169,22 +175,22 @@ const About = () => {
 
       {/* Section Valeurs */}
       <section className="py-16 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-6xl px-8 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-primary-900 mb-4">
+            <h2 className="mb-4 text-3xl font-bold text-primary-900">
               Nos Valeurs
             </h2>
             <p className="text-xl text-secondary-700">
               Les principes qui guident notre action
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {valeurs.map((valeur, index) => (
               <motion.div
                 key={index}
@@ -192,10 +198,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg p-8 text-center"
+                className="p-8 text-center bg-white shadow-lg rounded-2xl"
               >
-                <div className="text-4xl mb-4">{valeur.icon}</div>
-                <h3 className="text-xl font-bold text-primary-900 mb-2">
+                <div className="mb-4 text-4xl">{valeur.icon}</div>
+                <h3 className="mb-2 text-xl font-bold text-primary-900">
                   {valeur.title}
                 </h3>
                 <p className="text-secondary-700">
@@ -209,8 +215,8 @@ const About = () => {
 
       {/* Section Statistiques */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-6xl px-8 mx-auto">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {statistiques.map((stat, index) => (
               <motion.div
                 key={index}
@@ -218,12 +224,12 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg p-8 text-center"
+                className="p-8 text-center bg-white shadow-lg rounded-2xl"
               >
-                <p className="text-4xl font-bold text-primary-600 mb-2">
+                <p className="mb-2 text-4xl font-bold text-primary-600">
                   {stat.value}
                 </p>
-                <h3 className="text-xl font-bold text-primary-900 mb-2">
+                <h3 className="mb-2 text-xl font-bold text-primary-900">
                   {stat.title}
                 </h3>
                 <p className="text-secondary-700">
@@ -237,23 +243,23 @@ const About = () => {
 
       {/* Section CTA */}
       <section className="py-16 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-8 text-center">
+        <div className="max-w-6xl px-8 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-primary-900 mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-primary-900">
               Prêt à Démarrer ?
             </h2>
-            <p className="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto mb-8 text-xl text-secondary-700">
               Contactez-nous pour discuter de vos besoins et découvrir comment nous pouvons vous aider.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300"
+              className="px-8 py-3 font-medium text-white transition-colors duration-300 rounded-lg bg-primary-600 hover:bg-primary-700"
             >
               <Link to="/contact">Contactez-nous</Link>
             </motion.button>

@@ -10,7 +10,7 @@ const contactInfo = [
   },
   {
     title: "Téléphone",
-    description: "+237 6 99 99 99 99",
+    description: "+237 6 77 40 28 51",
     icon: <FaPhone className="text-xl text-primary-600" />
   },
   {
@@ -73,14 +73,14 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-secondary-50">
       {/* Section Hero */}
       <section className="py-24 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-6xl px-8 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl text-primary-900">
               Contactez-nous
             </h1>
             <p className="text-xl text-secondary-700">
@@ -92,8 +92,8 @@ const Contact = () => {
 
       {/* Section Contact */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-6xl px-8 mx-auto">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             {/* Informations de contact */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -102,7 +102,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+              <h2 className="mb-6 text-2xl font-bold text-primary-900">
                 Nos Coordonnées
               </h2>
               <div className="grid grid-cols-1 gap-6">
@@ -113,13 +113,13 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-2xl shadow-lg p-6 flex items-start space-x-4"
+                    className="flex items-start p-6 space-x-4 bg-white shadow-lg rounded-2xl"
                   >
                     <div className="text-primary-600">
                       {info.icon}
                     </div>
                     <div>
-                      <h3 className="font-bold text-primary-900 mb-1">
+                      <h3 className="mb-1 font-bold text-primary-900">
                         {info.title}
                       </h3>
                       <p className="text-secondary-700">
@@ -132,7 +132,7 @@ const Contact = () => {
 
               {/* Réseaux sociaux */}
               <div className="mt-8">
-                <h3 className="text-xl font-bold text-primary-900 mb-4">
+                <h3 className="mb-4 text-xl font-bold text-primary-900">
                   Suivez-nous
                 </h3>
                 <div className="flex space-x-4">
@@ -144,7 +144,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="bg-white rounded-xl p-3 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                      className="p-3 transition-shadow duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl"
                     >
                       {social.icon}
                     </motion.a>
@@ -159,14 +159,14 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-lg p-8"
+              className="p-8 bg-white shadow-lg rounded-2xl"
             >
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+              <h2 className="mb-6 text-2xl font-bold text-primary-900">
                 Envoyez-nous un message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-1">
+                  <label htmlFor="name" className="block mb-1 text-sm font-medium text-secondary-700">
                     Nom complet
                   </label>
                   <input
@@ -175,12 +175,12 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-1">
+                  <label htmlFor="email" className="block mb-1 text-sm font-medium text-secondary-700">
                     Email
                   </label>
                   <input
@@ -189,12 +189,12 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-secondary-700 mb-1">
+                  <label htmlFor="subject" className="block mb-1 text-sm font-medium text-secondary-700">
                     Sujet
                   </label>
                   <input
@@ -203,12 +203,12 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 rounded-lg border border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-1">
+                  <label htmlFor="message" className="block mb-1 text-sm font-medium text-secondary-700">
                     Message
                   </label>
                   <textarea
@@ -217,7 +217,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full px-4 py-2 rounded-lg border border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border rounded-lg border-secondary-300 focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     required
                   ></textarea>
                 </div>
@@ -225,7 +225,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300"
+                  className="w-full px-6 py-3 font-medium text-white transition-colors duration-300 rounded-lg bg-primary-600 hover:bg-primary-700"
                 >
                   Envoyer le message
                 </motion.button>
@@ -237,23 +237,23 @@ const Contact = () => {
 
       {/* Section CTA */}
       <section className="py-16 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-8 text-center">
+        <div className="max-w-6xl px-8 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-primary-900 mb-6">
+            <h2 className="mb-6 text-3xl font-bold text-primary-900">
               Prêt à Démarrer ?
             </h2>
-            <p className="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto mb-8 text-xl text-secondary-700">
               Contactez-nous pour discuter de vos besoins et découvrir comment nous pouvons vous aider.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary-600 text-white py-3 px-8 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300"
+              className="px-8 py-3 font-medium text-white transition-colors duration-300 rounded-lg bg-primary-600 hover:bg-primary-700"
             >
               <a href="tel:+237699999999">Appelez-nous</a>
             </motion.button>
