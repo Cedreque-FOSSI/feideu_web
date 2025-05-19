@@ -20,7 +20,7 @@ const testimonials = [
     content: "Leur approche en cybersécurité nous a permis de renforcer significativement notre protection contre les cybermenaces."
   },
   {
-    name: "Pierre Bernard",
+    name: "Pierre Bernard", 
     role: "Directeur Digital, RetailPlus",
     image: "/testimonials/pierre.jpg",
     content: "L'application mobile développée a dépassé nos attentes. L'expérience utilisateur est exceptionnelle."
@@ -33,14 +33,14 @@ const Testimonials = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-gradient-to-b from-primary-50 to-primary-100 p-8"
+      className="min-h-screen p-8 bg-gradient-to-b from-primary-50 to-primary-100"
     >
       <div className="max-w-6xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl font-bold text-primary-900 text-center mb-12"
+          className="mb-12 text-4xl font-bold text-center text-primary-900"
         >
           Témoignages
         </motion.h1>
@@ -49,13 +49,13 @@ const Testimonials = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-center text-gray-700 max-w-2xl mx-auto mb-16"
+          className="max-w-2xl mx-auto mb-16 text-center text-gray-700"
         >
           Découvrez ce que nos clients disent de notre travail et de notre collaboration.
           Leur satisfaction est notre meilleure récompense.
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 gap-8 mb-16 md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -63,14 +63,14 @@ const Testimonials = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-xl shadow-lg p-8"
+              className="p-8 bg-white shadow-lg rounded-xl"
             >
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                <div className="w-16 h-16 mr-4 overflow-hidden rounded-full">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-full h-full object-cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ const Testimonials = () => {
                   <p className="text-primary-600">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-600 italic">"{testimonial.content}"</p>
+              <p className="italic text-gray-600">"{testimonial.content}"</p>
             </motion.div>
           ))}
         </div>
@@ -87,17 +87,17 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-white rounded-xl shadow-lg p-8 text-center"
+          className="p-8 text-center bg-white shadow-lg rounded-xl"
         >
-          <h2 className="text-2xl font-semibold text-primary-800 mb-4">Devenez Notre Prochain Client Satisfait</h2>
-          <p className="text-gray-700 mb-6">
+          <h2 className="mb-4 text-2xl font-semibold text-primary-800">Devenez Notre Prochain Client Satisfait</h2>
+          <p className="mb-6 text-gray-700">
             Rejoignez nos clients satisfaits et découvrez comment nous pouvons
             transformer votre projet en succès.
           </p>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-primary-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300"
+            className="px-6 py-3 font-medium text-white transition-colors duration-300 rounded-lg bg-primary-600 hover:bg-primary-700"
           >
             Discutons de Votre Projet
           </motion.button>
